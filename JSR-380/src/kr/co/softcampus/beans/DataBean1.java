@@ -10,10 +10,10 @@ import javax.validation.constraints.PositiveOrZero;
 
 public class DataBean1 {
 	
-	@NotEmpty
+	@NotEmpty // 공백도 글자로 인식
 	private String data1;
 	
-	@NotBlank
+	@NotBlank // 공백 있어도 글자로 인식x. 공백 제외 글자 있어야 함
 	private String data2;
 	
 	@Positive//반드시 정수형
