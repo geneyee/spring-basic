@@ -24,6 +24,8 @@ public class DataBean1 {
 	@Min(10)
 	private String data3;
 	
+	// true -> 100 >= / false 100 > false면 미만
+	// true -> 10 =< / false 10 <  false면 초과
 	@DecimalMax(value="100", inclusive=false)
 	@DecimalMin(value="10", inclusive=false)
 	private String data4;
@@ -34,10 +36,10 @@ public class DataBean1 {
 	@NotNull
 	private String data6;
 	
-	@Digits(integer = 3, fraction = 3)
+	@Digits(integer = 3, fraction = 3) // integer = 정수 / fraction = 실수
 	private String data7;
 	
-	@Size(min = 3, max = 10)
+	@Size(min = 3, max = 10) 
 	private String data8;
 	
 	@Pattern(regexp = "[a-zA-Z]*")
